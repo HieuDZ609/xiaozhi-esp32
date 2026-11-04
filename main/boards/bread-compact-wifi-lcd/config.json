@@ -1,0 +1,25 @@
+{
+    "type": "bread-compact-wifi-lcd",
+    "target": "esp32s3",
+    "builds": [
+        {
+            "name": "bread-compact-wifi-lcd",
+            "sdkconfig_append": [
+                "CONFIG_LCD_ST7789_240X320=y"
+            ]
+        },
+        {
+            "name": "bread-compact-wifi-lcd-gc9a01",
+            "sdkconfig_append": [
+                "CONFIG_LCD_GC9A01_240X240=y"
+            ]
+        },
+        {
+            "name": "bread-compact-wifi-lcd-espnow-gc9a01",
+            "sdkconfig_append": [
+                "CONFIG_LCD_GC9A01_240X240=y",
+                "CONFIG_ESP_NOW_ENABLE=y"
+            ]
+        }
+    ]
+}
